@@ -113,7 +113,8 @@ a:hover {
   color: var(--color-gold-light);
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -126,7 +127,10 @@ ul, ol {
   font-family: var(--font-japanese);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-japanese);
   font-weight: 400;
   line-height: 1.4;
@@ -405,13 +409,11 @@ h3 {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(10, 8, 6, 0.3) 0%,
-    rgba(10, 8, 6, 0.1) 40%,
-    rgba(10, 8, 6, 0.6) 75%,
-    rgba(10, 8, 6, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(10, 8, 6, 0.3) 0%,
+      rgba(10, 8, 6, 0.1) 40%,
+      rgba(10, 8, 6, 0.6) 75%,
+      rgba(10, 8, 6, 1) 100%);
   z-index: 1;
 }
 
@@ -506,8 +508,17 @@ h3 {
 }
 
 @keyframes scrollLine {
-  0%, 100% { opacity: 0.3; transform: scaleY(0.6); }
-  50% { opacity: 1; transform: scaleY(1); }
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scaleY(0.6);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+  }
 }
 
 /* ─── Buttons ─── */
@@ -1309,10 +1320,21 @@ h3 {
   transform: translateY(0);
 }
 
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.2s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.4s;
+}
 
 /* ─── Ambient Background Effects ─── */
 .glow-orb {
@@ -1396,6 +1418,78 @@ h3 {
 /* ═══════════════════════════════════════════════════════
    Responsive Design
    ═══════════════════════════════════════════════════════ */
+
+/* ─── Mobile-first text balance ─── */
+/* Hide hard line breaks on small screens for natural text flow */
+.br-desktop {
+  display: none;
+}
+
+@media (max-width: 639px) {
+  .section-title {
+    font-size: clamp(1.3rem, 5.5vw, 1.8rem);
+    letter-spacing: 0.03em;
+  }
+
+  .concept-text p {
+    font-size: 0.88rem;
+    line-height: 2;
+  }
+
+  .hero__content {
+    padding: var(--space-md);
+  }
+
+  .hero__tagline {
+    font-size: clamp(0.95rem, 4vw, 1.2rem);
+    letter-spacing: 0.1em;
+  }
+
+  .hero__info {
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  .hero__info-item {
+    font-size: 0.8rem;
+  }
+
+  .cta-banner p {
+    font-size: 0.88rem;
+    line-height: 2;
+  }
+
+  .cta-banner p br {
+    display: none;
+  }
+
+  .system-note p {
+    font-size: 0.85rem;
+  }
+
+  .feature-text p {
+    font-size: 0.82rem;
+  }
+
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .section--sm {
+    padding: var(--space-xl) 0;
+  }
+
+  .btn {
+    padding: 0.75em 1.5em;
+    font-size: 0.75rem;
+  }
+}
+
+/* Show line breaks on tablet+ */
+@media (min-width: 640px) {
+  .br-desktop {
+    display: inline;
+  }
+}
 
 /* Tablet */
 @media (min-width: 640px) {
