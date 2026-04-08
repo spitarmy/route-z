@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spitarmy.github.io/route-z/sitemap.xml
+Sitemap: https://gion-route-z.com/sitemap.xml

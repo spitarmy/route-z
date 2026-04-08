@@ -1470,6 +1470,14 @@ h3 {
     font-size: 0.82rem;
   }
 
+  .popcorn-showcase__content {
+    padding: var(--space-md);
+  }
+
+  .popcorn-flavors {
+    justify-content: center;
+  }
+
   .section {
     padding: var(--space-2xl) 0;
   }
