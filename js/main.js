@@ -127,12 +127,12 @@ document.addEventListener('click', (e) => {
 /* ═══ Cracker Image Slideshow ═══ */
 const crackerImages = [
   'images/cracker-assort.jpg',
-  'images/cracker-pesto.jpg',
-  'images/cracker-olive.jpg',
+  'images/cracker-chocolate.jpg',
+  'images/cracker-bruschetta.jpg',
   'images/cracker-kimchi.jpg',
   'images/cracker-cheese.jpg',
   'images/cracker-olive2.jpg',
-  'images/cracker-chutney.jpg'
+  'images/cracker-salsa.jpg'
 ];
 
 function createCrackerSwitcher(imgId, dotParentSelector) {
