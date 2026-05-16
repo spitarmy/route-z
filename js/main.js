@@ -130,7 +130,9 @@ const crackerImages = [
   'images/cracker-pesto.jpg',
   'images/cracker-olive.jpg',
   'images/cracker-kimchi.jpg',
-  'images/cracker-cheese.jpg'
+  'images/cracker-cheese.jpg',
+  'images/cracker-olive2.jpg',
+  'images/cracker-chutney.jpg'
 ];
 
 function createCrackerSwitcher(imgId, dotParentSelector) {
