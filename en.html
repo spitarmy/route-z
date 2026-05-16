@@ -275,27 +275,33 @@
                 </div>
             </div>
 
-            <!-- Popcorn Showcase -->
+            <!-- Route Z Cracker Showcase -->
             <div class="popcorn-showcase reveal">
-                <div class="popcorn-showcase__image">
-                    <img src="images/popcorn.png" alt="Route Z Signature Popcorn" width="800" height="450"
-                        loading="lazy">
+                <div class="popcorn-showcase__image" style="position: relative; overflow: hidden;">
+                    <img src="images/cracker-assort.jpg" alt="Route Z Cracker — Signature snack on beautiful Kutani-ware plates" width="800" height="450"
+                        loading="lazy" id="en-cracker-img" style="transition: opacity 0.6s ease;">
+                    <div style="position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px; z-index: 2;">
+                        <button onclick="switchEnCracker(0)" class="cracker-dot active" aria-label="Assorted"></button>
+                        <button onclick="switchEnCracker(1)" class="cracker-dot" aria-label="Pesto"></button>
+                        <button onclick="switchEnCracker(2)" class="cracker-dot" aria-label="Olive"></button>
+                        <button onclick="switchEnCracker(3)" class="cracker-dot" aria-label="Kimchi"></button>
+                        <button onclick="switchEnCracker(4)" class="cracker-dot" aria-label="Cheese"></button>
+                    </div>
                 </div>
                 <div class="popcorn-showcase__content">
                     <p class="section-label">Signature Snack</p>
-                    <h3 class="section-title" style="font-size: clamp(1.2rem, 2.5vw, 1.6rem);">Route Z Popcorn</h3>
+                    <h3 class="section-title" style="font-size: clamp(1.2rem, 2.5vw, 1.6rem);">Route Z Cracker</h3>
                     <p style="color: var(--color-text-secondary); font-size: 0.9rem; line-height: 1.8;">
-                        The perfect companion to your drink, available in 6 carefully crafted flavors.<br
+                        Our signature snack, served on exquisite Kutani-ware plates.<br
                             class="br-desktop">
-                        An elegant bite for the midnight hours in Gion.
+                        Each cracker topped with carefully selected ingredients to complement your drink.
                     </p>
                     <div class="popcorn-flavors">
-                        <span class="popcorn-flavor">Midnight Salt</span>
-                        <span class="popcorn-flavor">Gion Sansho</span>
-                        <span class="popcorn-flavor">Black Route</span>
-                        <span class="popcorn-flavor">Cheese Gold</span>
-                        <span class="popcorn-flavor">Truffle Smoke</span>
-                        <span class="popcorn-flavor">Honey Black</span>
+                        <span class="popcorn-flavor">Pesto</span>
+                        <span class="popcorn-flavor">Olive</span>
+                        <span class="popcorn-flavor">Kimchi</span>
+                        <span class="popcorn-flavor">Cheese</span>
+                        <span class="popcorn-flavor">& more...</span>
                     </div>
                 </div>
             </div>

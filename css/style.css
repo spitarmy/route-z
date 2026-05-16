@@ -810,6 +810,28 @@ h3 {
   color: var(--color-gold);
 }
 
+/* Cracker slideshow dots */
+.cracker-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(201, 164, 74, 0.6);
+  background: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+.cracker-dot.active {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  transform: scale(1.2);
+}
+.cracker-dot:hover {
+  border-color: var(--color-gold);
+  background: rgba(201, 164, 74, 0.4);
+}
+
 /* ─── System / Pricing ─── */
 .pricing-grid {
   display: grid;

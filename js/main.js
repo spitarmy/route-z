@@ -123,3 +123,50 @@ document.addEventListener('click', (e) => {
   e.preventDefault();
   target.scrollIntoView({ behavior: 'smooth', block: 'start' });
 });
+
+/* ═══ Cracker Image Slideshow ═══ */
+const crackerImages = [
+  'images/cracker-assort.jpg',
+  'images/cracker-pesto.jpg',
+  'images/cracker-olive.jpg',
+  'images/cracker-kimchi.jpg',
+  'images/cracker-cheese.jpg'
+];
+
+function createCrackerSwitcher(imgId, dotParentSelector) {
+  return function(index) {
+    const img = document.getElementById(imgId);
+    if (!img) return;
+    img.style.opacity = '0';
+    setTimeout(() => {
+      img.src = crackerImages[index];
+      img.style.opacity = '1';
+    }, 300);
+    // Update dots
+    const container = img.closest('.popcorn-showcase__image');
+    if (container) {
+      container.querySelectorAll('.cracker-dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+    }
+  };
+}
+
+// Create switchers for each page
+const switchCracker = createCrackerSwitcher('cracker-main-img');
+const switchMenuCracker = createCrackerSwitcher('menu-cracker-img');
+const switchEnCracker = createCrackerSwitcher('en-cracker-img');
+
+// Auto-rotate cracker images
+document.addEventListener('DOMContentLoaded', () => {
+  ['cracker-main-img', 'menu-cracker-img', 'en-cracker-img'].forEach(imgId => {
+    const img = document.getElementById(imgId);
+    if (!img) return;
+    let current = 0;
+    const switcher = createCrackerSwitcher(imgId);
+    setInterval(() => {
+      current = (current + 1) % crackerImages.length;
+      switcher(current);
+    }, 4000);
+  });
+});
