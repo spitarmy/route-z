@@ -5,7 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initScrollReveal();
   initFAQ();
-  initFloatingCTA();
+  initCTATracking();
+  initUTMTracking();
+  initRouteTabs();
 });
 
 /* ═══ Header scroll effect ═══ */
@@ -90,26 +92,95 @@ function initFAQ() {
   });
 }
 
-/* ═══ Floating CTA ═══ */
-function initFloatingCTA() {
-  const cta = document.querySelector('.floating-cta');
-  if (!cta) return;
+/* ═══ CTA Conversion Tracking ═══ */
+function initCTATracking() {
+  document.addEventListener('click', (e) => {
+    const target = e.target.closest('a, button');
+    if (!target) return;
 
-  let lastScroll = 0;
+    let action = target.getAttribute('data-action');
+    const href = target.getAttribute('href') || '';
+    const text = (target.textContent || '').trim();
 
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.scrollY;
-    const windowHeight = window.innerHeight;
-
-    // Show after scrolling past the hero section
-    if (currentScroll > windowHeight * 0.8) {
-      cta.classList.add('visible');
-    } else {
-      cta.classList.remove('visible');
+    if (!action) {
+      if (href.startsWith('tel:')) {
+        action = 'call_click';
+      } else if (href.includes('google.com/maps') || href.includes('goo.gl/maps') || href.includes('maps.google')) {
+        action = 'map_click';
+      } else if (href.includes('lin.ee') || href.includes('line.me')) {
+        action = 'line_click';
+      } else if (href.includes('instagram.com')) {
+        action = 'instagram_click';
+      } else if (href.includes('/menu') || href.includes('menu/')) {
+        action = 'menu_click';
+      } else if (href.includes('/access') || href.includes('access/')) {
+        action = 'access_click';
+      } else if (text.includes('予約') || href.includes('reservation') || (target.id && target.id.includes('reserve'))) {
+        action = 'reservation_click';
+      }
     }
 
-    lastScroll = currentScroll;
-  }, { passive: true });
+    if (action) {
+      const eventData = {
+        event_category: 'CTA',
+        event_label: text.substring(0, 40) || action,
+        link_url: href,
+        page_location: window.location.href,
+        page_title: document.title
+      };
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', action, eventData);
+      }
+
+      try {
+        const events = JSON.parse(sessionStorage.getItem('route_z_cta_log') || '[]');
+        events.push({ action, timestamp: Date.now(), href });
+        if (events.length > 50) events.shift();
+        sessionStorage.setItem('route_z_cta_log', JSON.stringify(events));
+      } catch (err) {}
+    }
+  });
+}
+
+/* ═══ UTM Parameter Tracking ═══ */
+function initUTMTracking() {
+  try {
+    const urlParams = new URLSearchParams(window.location.search);
+    const utmSource = urlParams.get('utm_source');
+    const utmMedium = urlParams.get('utm_medium');
+    const utmCampaign = urlParams.get('utm_campaign');
+
+    if (utmSource || utmMedium || utmCampaign) {
+      const utmData = { utmSource, utmMedium, utmCampaign, timestamp: Date.now() };
+      localStorage.setItem('route_z_utm', JSON.stringify(utmData));
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'campaign_visit', {
+          campaign_source: utmSource,
+          campaign_medium: utmMedium,
+          campaign_name: utmCampaign
+        });
+      }
+    }
+  } catch (err) {}
+}
+
+/* ═══ Access Route Tabs Switcher ═══ */
+function initRouteTabs() {
+  const tabButtons = document.querySelectorAll('.route-tab-btn');
+  const routePanels = document.querySelectorAll('.route-panel');
+  if (!tabButtons.length || !routePanels.length) return;
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      tabButtons.forEach(b => b.classList.toggle('active', b === btn));
+      routePanels.forEach(panel => {
+        panel.style.display = panel.id === targetId ? 'block' : 'none';
+      });
+    });
+  });
 }
 
 /* ═══ Smooth scroll for anchor links ═══ */
@@ -117,7 +188,10 @@ document.addEventListener('click', (e) => {
   const anchor = e.target.closest('a[href^="#"]');
   if (!anchor) return;
 
-  const target = document.querySelector(anchor.getAttribute('href'));
+  const hash = anchor.getAttribute('href');
+  if (!hash || hash === '#') return;
+
+  const target = document.querySelector(hash);
   if (!target) return;
 
   e.preventDefault();
@@ -135,13 +209,16 @@ const crackerImages = [
   'images/cracker-salsa.jpg'
 ];
 
-function createCrackerSwitcher(imgId, dotParentSelector) {
+function createCrackerSwitcher(imgId) {
   return function(index) {
     const img = document.getElementById(imgId);
     if (!img) return;
     img.style.opacity = '0';
     setTimeout(() => {
-      img.src = crackerImages[index];
+      // Relative path handling
+      const currentSrc = img.getAttribute('src') || '';
+      const prefix = currentSrc.startsWith('../') ? '../' : '';
+      img.src = prefix + crackerImages[index];
       img.style.opacity = '1';
     }, 300);
     // Update dots
@@ -169,6 +246,6 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(() => {
       current = (current + 1) % crackerImages.length;
       switcher(current);
-    }, 4000);
+    }, 4500);
   });
 });

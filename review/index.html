@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ご来店ありがとうございました｜Bar Route Z（京都・祇園）</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .review-container {
+      max-width: 600px;
+      margin: 80px auto 60px;
+      padding: 40px 24px;
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-divider);
+      border-radius: var(--radius-lg);
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    }
+    .review-icon {
+      font-size: 3rem;
+      margin-bottom: var(--space-md);
+      display: inline-block;
+    }
+    .review-title {
+      font-family: var(--font-japanese);
+      font-size: 1.6rem;
+      color: var(--color-text-primary);
+      margin-bottom: var(--space-md);
+      line-height: 1.5;
+    }
+    .review-desc {
+      color: var(--color-text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.9;
+      margin-bottom: var(--space-xl);
+    }
+    .review-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--color-gold), #b8860b);
+      color: #000;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 18px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(201, 164, 74, 0.4);
+      transition: all 0.3s ease;
+      margin: 0 auto var(--space-lg);
+      max-width: 380px;
+    }
+    .review-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 25px rgba(201, 164, 74, 0.6);
+      color: #000;
+    }
+    .review-note {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body style="background: var(--color-bg-deep);">
+  <header class="header" id="header">
+    <div class="container" style="justify-content: center;">
+      <a href="/" class="header__logo">Route Z</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="review-container">
+      <div class="review-icon">🥃</div>
+      <h1 class="review-title">本日はご来店いただき、<br>誠にありがとうございました。</h1>
+      <p class="review-desc">
+        Route Zでのひとときは心地よい夜になりましたでしょうか。<br>
+        当店は皆様の温かいお声をもとに、より良い隠れ家Barを目指しております。<br><br>
+        もしよろしければ、Googleマップにて率直なご感想や応援メッセージをお聞かせいただけますと大変励みになります。
+      </p>
+
+      <a href="https://www.google.com/maps/search/?api=1&query=Bar+Route+Z+京都市東山区林下町422+円山ビル4F" target="_blank" rel="noopener" class="review-btn" id="write-review-btn">
+        <span>★</span> Googleで口コミ・感想を書く
+      </a>
+
+      <p class="review-note">
+        ※Googleアカウントでのログインが必要です。<br>
+        ※スタッフへの励ましや、お気に入りの一杯についてのお声をお待ちしております。
+      </p>
+    </div>
+  </main>
+
+  <footer style="text-align: center; padding: 30px; font-size: 0.8rem; color: var(--color-text-muted);">
+    <p>&copy; 2026 Route Z. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/business-config.js"></script>
+</body>
+</html>

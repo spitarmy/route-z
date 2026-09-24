@@ -255,8 +255,9 @@
                             <h3 class="menu-category__title">Japanese Whisky</h3>
                             <div class="menu-items">
                                 <div class="menu-item"><span class="menu-item__name">Kaku / Suntory Old</span><span class="menu-item__dots"></span><span class="menu-item__price">¥800</span></div>
-                                <div class="menu-item"><span class="menu-item__name">Hakushu / Yoichi / Taketsuru</span><span class="menu-item__dots"></span><span class="menu-item__price">¥2,000</span></div>
-                                <div class="menu-item"><span class="menu-item__name">Yamazaki NV / Yamazaki 12</span><span class="menu-item__dots"></span><span class="menu-item__price">¥2,500+</span></div>
+                                <div class="menu-item"><span class="menu-item__name">Yoichi / Chita</span><span class="menu-item__dots"></span><span class="menu-item__price">¥1,200</span></div>
+                                <div class="menu-item"><span class="menu-item__name">Hakushu / Taketsuru / Yamazaki NV</span><span class="menu-item__dots"></span><span class="menu-item__price">¥2,000</span></div>
+                                
                             </div>
                         </div>
                     </div>
@@ -330,7 +331,7 @@
             <div class="system-notes reveal">
                 <div class="system-note">
                     <span class="system-note__icon">✦</span>
-                    <p><strong>10% Service Fee & Tax</strong> will be added to your total bill.</p>
+                    <p><strong>All Prices Include Tax & No Service Fee</strong>. Transparent pricing: Table Charge + Drink Price only.</p>
                 </div>
                 <div class="system-note">
                     <span class="system-note__icon">✦</span>
@@ -443,14 +444,14 @@
     </footer>
 
     <!-- ═══ Floating CTA (Mobile) ═══ -->
-    <div class="floating-cta" id="floating-cta">
-        <a href="https://www.google.com/maps/search/?api=1&query=京都市東山区林下町422+円山ビル" target="_blank" rel="noopener" class="btn btn--primary"
-            id="float-map-btn">📍 Map</a>
-        <a href="tel:070-3616-9115" class="btn btn--outline" id="float-tel-btn">📞 Call</a>
-        <a href="/" class="btn btn--outline" id="float-lang-btn">🇯🇵 JP</a>
-    </div>
+    <div class="floating-cta" id="floating-cta" style="display:flex; gap:8px; padding:10px 14px; background:rgba(10,8,6,0.96); backdrop-filter:blur(10px); border-top:1px solid var(--color-divider); z-index:999;">
+    <a href="https://www.google.com/maps/search/?api=1&query=京都市東山区林下町422+円山ビル" target="_blank" rel="noopener" class="btn btn--outline" id="float-map-btn" style="flex:1; padding:10px 4px; font-size:0.85rem; text-align:center;">📍 Map</a>
+    <a href="https://lin.ee/xKJlAsO" target="_blank" rel="noopener" class="btn btn--primary" id="float-line-btn" style="flex:2; padding:10px 6px; font-size:0.88rem; background:linear-gradient(135deg, #06c755, #05a847); border-color:#06c755; color:#fff; font-weight:700; text-align:center;">💬 今夜の空席確認</a>
+    <a href="tel:070-3616-9115" class="btn btn--outline" id="float-tel-btn" style="flex:1; padding:10px 4px; font-size:0.85rem; text-align:center;">📞 電話</a>
+  </div>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/business-config.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>

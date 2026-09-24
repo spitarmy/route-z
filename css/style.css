@@ -1437,6 +1437,310 @@ h3 {
   color: var(--color-gold);
 }
 
+/* ─── Breadcrumbs ─── */
+.breadcrumbs {
+  padding: var(--space-md) 0;
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.breadcrumbs li+li::before {
+  content: '›';
+  color: var(--color-text-muted);
+}
+
+.breadcrumbs a {
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbs a:hover {
+  color: var(--color-gold);
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--color-gold);
+}
+
+/* ─── Floating CTA (Mobile Fixed Bottom Bar) ─── */
+.floating-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom, 10px));
+  background: rgba(10, 10, 10, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(201, 164, 74, 0.35);
+  z-index: 999;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+}
+
+.floating-cta .btn {
+  flex: 1;
+  max-width: 135px;
+  padding: 0.65em 0.5em;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: calc(65px + env(safe-area-inset-bottom, 10px)) !important;
+  }
+}
+
+/* ─── Visual Entrance Guide (4F Building Guide) ─── */
+.entrance-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  margin-top: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .entrance-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.entrance-step-card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+}
+
+.entrance-step-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(201, 164, 74, 0.4);
+}
+
+.entrance-step-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 16/10;
+  background: #141414;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid var(--color-divider);
+}
+
+.entrance-step-card__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.entrance-step-card__body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.entrance-step-card__badge {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  color: var(--color-gold);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-xs);
+}
+
+.entrance-step-card__title {
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xs);
+  font-weight: 500;
+}
+
+.entrance-step-card__desc {
+  font-size: 0.84rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ─── Route Step Flow (Step1-Step4) ─── */
+.route-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xl);
+}
+
+.route-tab-btn {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-divider);
+  color: var(--color-text-secondary);
+  padding: 0.6em 1.2em;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.route-tab-btn.active,
+.route-tab-btn:hover {
+  background: rgba(201, 164, 74, 0.15);
+  border-color: var(--color-gold);
+  color: var(--color-gold-light);
+}
+
+.step-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.step-item {
+  display: flex;
+  gap: var(--space-md);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-divider);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  align-items: flex-start;
+}
+
+.step-number {
+  flex-shrink: 0;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(201, 164, 74, 0.15);
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.step-content {
+  flex-grow: 1;
+}
+
+.step-title {
+  font-size: 0.98rem;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.step-desc {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ─── Guide Page Specifics ─── */
+.guide-article {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+.guide-intro-lead {
+  font-size: 1.05rem;
+  line-height: 2;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-xl);
+  border-left: 2px solid var(--color-gold);
+  padding-left: var(--space-md);
+}
+
+.guide-section {
+  margin-bottom: var(--space-2xl);
+}
+
+.guide-section h2 {
+  font-size: 1.25rem;
+  color: var(--color-gold-light);
+  border-bottom: 1px solid var(--color-divider);
+  padding-bottom: var(--space-xs);
+  margin-bottom: var(--space-md);
+}
+
+.guide-section h3 {
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.guide-section p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 2;
+  margin-bottom: var(--space-md);
+}
+
+.guide-feature-box {
+  background: var(--color-bg-card);
+  border: 1px solid rgba(201, 164, 74, 0.25);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin: var(--space-xl) 0;
+}
+
+.guide-feature-box h4 {
+  font-size: 1rem;
+  color: var(--color-gold);
+  margin-bottom: var(--space-xs);
+}
+
+.guide-cta-box {
+  background: linear-gradient(180deg, rgba(201, 164, 74, 0.1) 0%, rgba(10, 10, 10, 0.8) 100%);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: var(--space-xl);
+  text-align: center;
+  margin-top: var(--space-2xl);
+}
+
 /* ═══════════════════════════════════════════════════════
    Responsive Design
    ═══════════════════════════════════════════════════════ */
@@ -1572,7 +1876,11 @@ h3 {
   }
 
   .floating-cta {
-    display: none;
+    display: none !important;
+  }
+
+  body {
+    padding-bottom: 0 !important;
   }
 
   .hero__logo {

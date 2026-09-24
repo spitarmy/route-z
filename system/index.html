@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="fbmY9b91koMnHaoPvO0IB1TQWQoI2RT6o6DKHTP9VI4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>システム・料金｜Route Z — チャージ・ボトルキープ・キャッシュレス対応｜祇園Bar</title>
+    <title>システム・料金｜Route Z — チャージ一律1,500円・明朗会計・ボトルキープ｜祇園Bar</title>
     <meta name="description"
-        content="Route Zの料金システム。BOXチャージ2,000円、カウンターチャージ1,500円など明朗会計。ボトルキープ半年、キャッシュレス完全対応。祇園四条の隠れ家Barで、接待の二次会や一人飲みでも安心して安く飲める価格設定です。">
+        content="Route Zの料金システム。BOXチャージ・カウンターチャージともに一律1,500円（税込・サービス料なし）の明朗会計。ボトルキープ半年、各種キャッシュレス完全対応。祇園四条・八坂神社すぐの隠れ家Barで、接待の二次会、デート、一人飲みでも安心してお過ごしいただけます。">
     <link rel="canonical" href="https://gion-route-z.com/system/">
     <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
     <link rel="stylesheet" href="../css/style.css">
@@ -155,7 +155,7 @@
                     <div class="feature-icon">🥃</div>
                     <div class="feature-text">
                         <h3>単品・ボトル中心</h3>
-                        <p>飲み放題ではなく、一杯一杯を丁寧にお出しするスタイルです。ハウスハイボール¥900〜、ウイスキー¥1,400〜。<strong>上質な酒を、いい価格で</strong>ご提供します。
+                        <p>飲み放題ではなく、一杯一杯を丁寧にお出しするスタイルです。ハイボール¥800〜、ウイスキー¥700〜。<strong>上質な酒を、いい価格で</strong>ご提供します。
                         </p>
                     </div>
                 </div>
@@ -179,7 +179,9 @@
                     <span class="payment-badge">📱 iD</span>
                     <span class="payment-badge">📱 QUICPay</span>
                     <span class="payment-badge">📱 PayPay</span>
-                    <span class="payment-badge">📱 LINE Pay</span>
+                    <span class="payment-badge">📱 d払い</span>
+                    <span class="payment-badge">📱 au PAY</span>
+                    <span class="payment-badge">📱 楽天ペイ</span>
                 </div>
             </div>
         </div>
@@ -234,14 +236,14 @@
         </div>
     </footer>
 
-    <div class="floating-cta" id="floating-cta">
-        <a href="https://www.google.com/maps/search/?api=1&query=京都市東山区林下町422+円山ビル" target="_blank" rel="noopener" class="btn btn--primary">📍
-            Map</a>
-        <a href="tel:070-3616-9115" class="btn btn--outline">📞 Call</a>
-        <a href="https://lin.ee/xKJlAsO" target="_blank" rel="noopener" class="btn btn--outline">�� LINE</a>
-    </div>
+    <div class="floating-cta" id="floating-cta" style="display:flex; gap:8px; padding:10px 14px; background:rgba(10,8,6,0.96); backdrop-filter:blur(10px); border-top:1px solid var(--color-divider); z-index:999;">
+    <a href="https://www.google.com/maps/search/?api=1&query=京都市東山区林下町422+円山ビル" target="_blank" rel="noopener" class="btn btn--outline" id="float-map-btn" style="flex:1; padding:10px 4px; font-size:0.85rem; text-align:center;">📍 Map</a>
+    <a href="https://lin.ee/xKJlAsO" target="_blank" rel="noopener" class="btn btn--primary" id="float-line-btn" style="flex:2; padding:10px 6px; font-size:0.88rem; background:linear-gradient(135deg, #06c755, #05a847); border-color:#06c755; color:#fff; font-weight:700; text-align:center;">💬 今夜の空席確認</a>
+    <a href="tel:070-3616-9115" class="btn btn--outline" id="float-tel-btn" style="flex:1; padding:10px 4px; font-size:0.85rem; text-align:center;">📞 電話</a>
+  </div>
 
-    <script src="../js/main.js"></script>
+    <script src="../js/business-config.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 
 </html>
