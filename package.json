@@ -1,0 +1,20 @@
+{
+  "name": "gion-route-z",
+  "version": "2.0.0",
+  "description": "祇園の隠れ家Bar Route Z 公式Webサイト",
+  "scripts": {
+    "test": "node scripts/qa-audit.mjs",
+    "qa": "node scripts/qa-audit.mjs",
+    "sync": "node scripts/sync-all-pages.mjs",
+    "generate:guides": "node scripts/generate-guides.mjs"
+  },
+  "keywords": [
+    "gion",
+    "bar",
+    "route-z",
+    "kyoto",
+    "japanese-whisky"
+  ],
+  "author": "ZENNOBATE",
+  "license": "UNLICENSED"
+}

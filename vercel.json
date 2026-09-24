@@ -1,6 +1,28 @@
 {
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/guide/gion-late-night/(.*)",
+      "destination": "/guide/gion-after-bar/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/gion-late-night",
+      "destination": "/guide/gion-after-bar/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/gion-whisky/(.*)",
+      "destination": "/guide/gion-japanese-whisky/",
+      "permanent": true
+    },
+    {
+      "source": "/guide/gion-whisky",
+      "destination": "/guide/gion-japanese-whisky/",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

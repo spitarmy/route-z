@@ -3,7 +3,7 @@
   <url>
     <loc>https://gion-route-z.com/</loc>
     <lastmod>2026-09-24</lastmod>
-    <changefreq>daily</changefreq>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
@@ -28,7 +28,7 @@
     <loc>https://gion-route-z.com/access/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://gion-route-z.com/faq/</loc>
@@ -61,45 +61,51 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gion-route-z.com/review/</loc>
+    <loc>https://gion-route-z.com/guide/gion-after-bar/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gion-route-z.com/guide/</loc>
+    <loc>https://gion-route-z.com/guide/gion-hidden-bar/</loc>
     <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://gion-route-z.com/guide/gion-karaoke-bar/</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gion-route-z.com/guide/gion-second-bar/</loc>
     <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gion-route-z.com/guide/gion-solo-bar/</loc>
     <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://gion-route-z.com/guide/gion-date-bar/</loc>
     <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gion-route-z.com/guide/gion-whisky/</loc>
+    <loc>https://gion-route-z.com/guide/gion-japanese-whisky/</loc>
     <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://gion-route-z.com/guide/gion-late-night/</loc>
+    <loc>https://gion-route-z.com/en/gion-bar/</loc>
     <lastmod>2026-09-24</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>

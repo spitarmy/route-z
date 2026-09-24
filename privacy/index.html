@@ -9,6 +9,9 @@
     <meta name="description" content="Route Zのプライバシーポリシー。個人情報の取り扱いについてご説明いたします。">
     <meta name="robots" content="noindex, follow">
     <link rel="canonical" href="https://gion-route-z.com/privacy/">
+    <link rel="alternate" hreflang="ja" href="https://gion-route-z.com/privacy/">
+    <link rel="alternate" hreflang="en" href="https://gion-route-z.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://gion-route-z.com/">
     <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -46,7 +49,7 @@
                 <li><a href="/contact/" class="mobile-nav__link">Contact</a></li>
             </ul>
             <div class="mobile-nav__info">
-                <p>20:00 — Last</p>
+                <p>20:00 — Last<br><a href="tel:070-3616-9115" style="color:var(--color-gold);">070-3616-9115</a></p>
                 <p>京都市東山区林下町422 円山ビル4F</p>
             </div>
         </div>
@@ -151,6 +154,12 @@
 
     <script src="../js/business-config.js"></script>
   <script src="../js/main.js"></script>
+  <!-- Floating CTA -->
+  <div class="floating-cta" id="floating-cta">
+    <a href="https://www.google.com/maps/search/?api=1&query=京都市東山区林下町422+円山ビル" target="_blank" rel="noopener" class="btn btn--outline" id="float-map-btn" data-action="map_click">📍 Map</a>
+    <a href="https://lin.ee/xKJlAsO" target="_blank" rel="noopener" class="btn btn--primary" id="float-line-btn" data-action="line_click" style="background:linear-gradient(135deg, #06c755, #05a847); border-color:#06c755; color:#fff; font-weight:700;">💬 空席確認</a>
+    <a href="tel:070-3616-9115" class="btn btn--outline" id="float-tel-btn" data-action="call_click">📞 電話</a>
+  </div>
 </body>
 
 </html>
