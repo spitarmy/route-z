@@ -74,17 +74,23 @@ console.log(`==================================================\n`);
   check(2, 'Opening hours consistency (All pages contain 20:00)', hoursInconsistency.length === 0, hoursInconsistency.join('; '));
 }
 
-// 3. Address consistency
+// 3. Address consistency (including Postal Code 615-8252)
 {
   let addressInconsistency = [];
   for (const file of htmlFiles) {
     const text = fs.readFileSync(file, 'utf8');
     const rel = path.relative(BASE_DIR, file).replace(/\\/g, '/');
     if (!text.includes('林下町422') && !text.includes('Rinshacho')) {
-      addressInconsistency.push(`${rel} missing correct address`);
+      addressInconsistency.push(`${rel} missing correct street address`);
+    }
+    if (!text.includes('615-8252')) {
+      addressInconsistency.push(`${rel} missing updated postal code 615-8252`);
+    }
+    if (text.includes('605-0062')) {
+      addressInconsistency.push(`${rel} contains old postal code 605-0062`);
     }
   }
-  check(3, 'Address consistency (林下町422 円山ビル4F across all pages)', addressInconsistency.length === 0, addressInconsistency.join('; '));
+  check(3, 'Address & Postal code consistency (〒615-8252 林下町422 円山ビル4F across all pages)', addressInconsistency.length === 0, addressInconsistency.join('; '));
 }
 
 // 4. Phone number consistency
