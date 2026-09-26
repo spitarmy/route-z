@@ -344,7 +344,7 @@ for (const g of guides) {
           "streetAddress": "林下町422 円山ビル4F",
           "addressLocality": "京都市東山区",
           "addressRegion": "京都府",
-          "postalCode": "615-8252",
+          "postalCode": "605-0062",
           "addressCountry": "JP"
         },
         "geo": {
@@ -517,7 +517,7 @@ for (const g of guides) {
                     <p class="footer__nav-title">Access</p>
                     <div class="footer__links">
                         <span class="footer__link" style="cursor: default; font-size: 0.82rem;">
-                            〒615-8252<br>
+                            〒605-0062<br>
                             京都市東山区林下町422<br>
                             円山ビル4F
                         </span>

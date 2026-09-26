@@ -3,7 +3,7 @@ import path from 'path';
 
 const BASE_DIR = path.resolve('C:/Users/zenno/.gemini/antigravity/scratch/gion-route-z');
 
-console.log('=== STEP 1: Replacing Postal Code 615-8252 -> 615-8252 everywhere ===');
+console.log('=== STEP 1: Replacing Postal Code 605-0062 -> 605-0062 everywhere ===');
 
 function replaceInDir(dir) {
   for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
@@ -13,8 +13,8 @@ function replaceInDir(dir) {
       replaceInDir(full);
     } else if (entry.isFile() && (entry.name.endsWith('.html') || entry.name.endsWith('.json') || entry.name.endsWith('.js') || entry.name.endsWith('.mjs') || entry.name.endsWith('.md'))) {
       let content = fs.readFileSync(full, 'utf8');
-      if (content.includes('615-8252')) {
-        content = content.replace(/615-8252/g, '615-8252');
+      if (content.includes('605-0062')) {
+        content = content.replace(/605-0062/g, '605-0062');
         fs.writeFileSync(full, content, 'utf8');
         console.log(`Updated postal code in: ${path.relative(BASE_DIR, full)}`);
       }
