@@ -33,8 +33,16 @@
       "serviceFeePercent": 0,
       "taxStatusJa": "すべて税込価格（サービス料・深夜料金なし）",
       "taxStatusEn": "All prices include tax. No service fee or late-night surcharge.",
-      "chargeNoteJa": "チャージ＋ドリンク代のみの明朗会計です。",
-      "chargeNoteEn": "Transparent pricing: Table Charge + Drink Price only."
+      "allYouCanDrinkPlan": {
+        "price": 5000,
+        "durationMinutes": 120,
+        "taxIncluded": true,
+        "karaokeIncluded": true,
+        "titleJa": "2時間飲み放題プラン 5,000円（税込）",
+        "descJa": "祇園で圧倒的破格の明朗会計！生ビール・ハイボール・カクテル・サワー・焼酎・梅酒などが2時間飲み放題。チャージ料込み・カラオケ歌い放題付きで追加料金一切なし。"
+      },
+      "chargeNoteJa": "チャージ＋ドリンク代、またはお得な2時間飲み放題5,000円（チャージ・カラオケ込）の明朗会計です。",
+      "chargeNoteEn": "Transparent pricing: Table Charge + Drink Price, or All-You-Can-Drink 2 Hours for ¥5,000 (tax, charge & karaoke included)."
     },
     "drinks": {
       "beer": 800,
