@@ -95,6 +95,7 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 64px;
 }
 
 img {
@@ -1311,23 +1312,20 @@ h3 {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-top: 1px solid var(--color-divider);
-  padding: var(--space-sm) var(--space-md);
+  padding: 8px 12px;
   display: flex;
-  gap: var(--space-xs);
+  gap: 8px;
   justify-content: center;
-  transform: translateY(100%);
-  transition: transform var(--transition-normal);
-}
-
-.floating-cta.visible {
   transform: translateY(0);
+  transition: transform var(--transition-normal);
 }
 
 .floating-cta .btn {
   flex: 1;
-  max-width: 160px;
-  padding: 0.7em 1em;
-  font-size: 0.7rem;
+  max-width: 180px;
+  padding: 0.75em 1em;
+  font-size: 0.8rem;
+  font-weight: 700;
 }
 
 /* ─── Scroll Reveal Animations ─── */
