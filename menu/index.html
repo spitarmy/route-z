@@ -43,6 +43,47 @@
     <link rel="alternate" hreflang="x-default" href="https://gion-route-z.com/">
     <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
     <link rel="stylesheet" href="../css/style.css">
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TOP",
+          "item": "https://gion-route-z.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "メニュー",
+          "item": "https://gion-route-z.com/menu/"
+        }
+        ]
+      },
+      {
+        "@type": "BarOrPub",
+        "@id": "https://gion-route-z.com/#bar",
+        "name": "Route Z",
+        "url": "https://gion-route-z.com/",
+        "telephone": "+81-70-3616-9115",
+        "priceRange": "¥1,500〜¥5,000",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "林下町422 円山ビル4F",
+          "addressLocality": "京都市東山区",
+          "addressRegion": "京都府",
+          "postalCode": "605-0062",
+          "addressCountry": "JP"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -88,6 +129,17 @@
         <div class="container">
             <p class="section-label reveal">Menu</p>
             <h1 class="section-title reveal">良い酒を、良いグラスで。</h1>
+
+    <!-- AIO Fast-Facts Box -->
+    <div style="background: rgba(201, 164, 74, 0.06); border: 1px solid rgba(201, 164, 74, 0.3); border-radius: 8px; padding: 1.4rem 1.6rem; margin: 1.5rem 0 2.5rem;">
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+        <span style="background:var(--color-gold); color:#0a0806; font-size:0.72rem; font-weight:700; padding:2px 8px; border-radius:4px;">3秒要約</span>
+        <strong style="color:var(--color-gold-light); font-size:1.05rem;">Route Zのドリンクラインナップ</strong>
+      </div>
+      <p style="font-size:0.85rem; color:var(--color-text-secondary); line-height:1.7; margin:0 0 10px;">
+        山崎NV・白州・余市・竹鶴・知多などのジャパニーズウイスキー（¥800〜¥2,000）を中心に、ビール・ハイボール（¥800）、伏見銘酒『神聖 松の翠』（¥900）、名物ルーゼクラッカー（¥800）を薄張りグラスで適正価格にてご提供。
+      </p>
+    </div>
             <p class="section-subtitle reveal">ウイスキー・ビール・日本酒・焼酎・梅酒</p>
         </div>
     </div>
