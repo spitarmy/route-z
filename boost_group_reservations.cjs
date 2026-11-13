@@ -15,7 +15,7 @@ if (fs.existsSync(charterPath)) {
 
   charterHtml = charterHtml.replace(
     /<meta name="description" content="[^"]*?"\s*\/?>/,
-    '<meta name="description" content="京都祇園・八坂神社すぐの隠れ家Bar Route Z。8名〜15名様のフロア完全貸切・忘年会・二次会に最適！2時間飲み放題＋カラオケ歌い放題＋チャージ料込みでお一人様5,000円ポッキリ明朗会計。インボイス対応領収書即時発行。フード持ち込み自由。公式LINEから最短5分で日程の空き状況確認・予約可能！">'
+    '<meta name="description" content="京都祇園・八坂神社すぐの隠れ家Bar Route Z。8名〜15名様のフロア完全貸切・忘年会・二次会に最適！2時間飲み放題＋カラオケ歌い放題＋チャージ料込みでお一人様5,000円ポッキリ明朗会計。領収書即時発行。フード持ち込み自由。公式LINEから最短5分で日程の空き状況確認・予約可能！">'
   );
 
   charterHtml = charterHtml.replace(
@@ -25,7 +25,7 @@ if (fs.existsSync(charterPath)) {
 
   charterHtml = charterHtml.replace(
     /<meta property="og:description" content="[^"]*?"/,
-    '<meta property="og:description" content="京都祇園・八坂神社すぐ。8名〜15名様のフロア完全貸切・忘年会・二次会に最適！2時間飲み放題＋カラオケ歌い放題付きで1名5,000円ポッキリ明朗会計。インボイス領収書即時発行。"'
+    '<meta property="og:description" content="京都祇園・八坂神社すぐ。8名〜15名様のフロア完全貸切・忘年会・二次会に最適！2時間飲み放題＋カラオケ歌い放題付きで1名5,000円ポッキリ明朗会計。領収書即時発行。"'
   );
 
   fs.writeFileSync(charterPath, charterHtml, 'utf8');
@@ -41,7 +41,7 @@ if (fs.existsSync(guideIndexPath)) {
         <div style="background:linear-gradient(135deg, rgba(201,164,74,0.18), rgba(15,12,10,0.98)); border:2px solid var(--color-gold); border-radius:var(--radius-md); padding:24px 28px; box-shadow:0 6px 25px rgba(201,164,74,0.2);">
           <span style="font-size:0.75rem; background:var(--color-gold); color:#000; font-weight:800; padding:2px 8px; border-radius:4px; letter-spacing:0.05em;">🎉 幹事様必見！忘年会・二次会 特集</span>
           <h2 style="font-size:1.25rem; font-family:var(--font-japanese); margin:8px 0 12px;"><a href="gion-charter-party-bar/" style="color:var(--color-gold-light); text-decoration:none;">【8〜15名フロア貸切】祇園のバー貸切・忘年会二次会ならRoute Z｜飲放＆歌放5,000円ポッキリ</a></h2>
-          <p style="font-size:0.9rem; color:var(--color-text-secondary); line-height:1.8; margin-bottom:16px;">京都祇園・八坂神社すぐ。8名〜15名様のフロア完全貸切・忘年会・二次会に最適！2時間飲み放題＋カラオケ歌い放題＋チャージ料込みで1名5,000円ポッキリ。インボイス対応領収書即時発行、フード持込自由。</p>
+          <p style="font-size:0.9rem; color:var(--color-text-secondary); line-height:1.8; margin-bottom:16px;">京都祇園・八坂神社すぐ。8名〜15名様のフロア完全貸切・忘年会・二次会に最適！2時間飲み放題＋カラオケ歌い放題＋チャージ料込みで1名5,000円ポッキリ。領収書即時発行、フード持込自由。</p>
           <a href="gion-charter-party-bar/" style="color:var(--color-gold); font-size:0.88rem; font-weight:600; text-decoration:underline;">貸切・忘年会プラン詳細を見る →</a>
         </div>
 `;
@@ -67,7 +67,7 @@ if (fs.existsSync(indexPath)) {
     <div class="container" style="display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap;">
       <span style="background: var(--color-gold); color: #000; font-size: 0.78rem; font-weight: 900; padding: 3px 10px; border-radius: 4px; letter-spacing: 0.05em;">🎉 忘年会・二次会予約受付中</span>
       <span style="font-size: 0.95rem; color: #fff; font-weight: 700;">
-        8〜15名様フロア完全貸切！飲放＆歌放チャージ込 5,000円ポッキリ（インボイス領収書OK）
+        8〜15名様フロア完全貸切！飲放＆歌放チャージ込 5,000円ポッキリ（領収書発行OK）
       </span>
       <div style="display: flex; gap: 8px;">
         <a href="/guide/gion-charter-party-bar/" style="background: rgba(201, 164, 74, 0.2); border: 1px solid var(--color-gold); color: var(--color-gold-light); font-size: 0.82rem; font-weight: 700; padding: 6px 14px; border-radius: 20px; text-decoration: none;">詳細を見る →</a>

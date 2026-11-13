@@ -69,10 +69,10 @@ console.log('=== STEP 2: Elevating TOP page (index.html) for Rank 1-3 Domination
       },
       {
         "@type": "Question",
-        "name": "キャッシュレス決済や領収書・インボイスに対応していますか？",
+        "name": "キャッシュレス決済や領収書・領収書に対応していますか？",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Airペイを導入しており、各種クレジットカード（VISA, JCB, AMEX等）、交通系IC、PayPay、d払い、au PAY、楽天ペイに対応しています。インボイス制度対応の領収書も即時発行可能です。"
+          "text": "Airペイを導入しており、各種クレジットカード（VISA, JCB, AMEX等）、交通系IC、PayPay、d払い、au PAY、楽天ペイに対応しています。領収書発行対応の領収書も即時発行可能です。"
         }
       }
     ]
@@ -114,9 +114,9 @@ console.log('=== STEP 2: Elevating TOP page (index.html) for Rank 1-3 Domination
           </p>
         </div>
         <div class="card" style="border-left: 3px solid var(--color-gold);">
-          <h3 style="font-size: 1.05rem; color: var(--color-gold-light); margin-bottom: 6px;">③ インボイス・領収書即時対応</h3>
+          <h3 style="font-size: 1.05rem; color: var(--color-gold-light); margin-bottom: 6px;">③ 領収書・領収書即時対応</h3>
           <p style="font-size: 0.85rem; color: var(--color-text-secondary); line-height: 1.8; margin: 0;">
-            適格請求書（インボイス制度）に対応。接待・会食・出張の経費精算用領収書をその場ですぐに発行いたします。
+            適格請求書（領収書発行）に対応。接待・会食・出張の経費精算用領収書をその場ですぐに発行いたします。
           </p>
         </div>
         <div class="card" style="border-left: 3px solid var(--color-gold);">
@@ -340,11 +340,11 @@ console.log('=== STEP 2: Elevating TOP page (index.html) for Rank 1-3 Domination
 
         <div class="faq-item">
           <button class="faq-question">
-            <span>領収書・インボイス制度に対応していますか？</span>
+            <span>領収書の発行は可能ですか？</span>
             <span class="faq-question__icon">+</span>
           </button>
           <div class="faq-answer">
-            <p>はい、適格請求書発行事業者に登録済みですので、インボイス対応の領収書を即時発行いたします。会社の経費精算や接待利用もご安心ください。</p>
+            <p>はい、適格請求書発行事業者に登録済みですので、領収書発行対応の領収書を即時発行いたします。会社の経費精算や接待利用もご安心ください。</p>
           </div>
         </div>
 
