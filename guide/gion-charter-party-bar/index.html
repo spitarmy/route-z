@@ -302,6 +302,11 @@
                         ・利用用途：忘年会／二次会／誕生日など<br>
                         ・持込・食事：出前希望／ケーキ持込／軽食注文など
                     </div>
+                    <div style="text-align: center; margin-bottom: 22px;">
+                        <button type="button" id="copy-template-btn" onclick="copyTemplate()" style="background: rgba(201, 164, 74, 0.2); border: 1px solid var(--color-gold); color: var(--color-gold-light); padding: 8px 20px; border-radius: 9999px; font-size: 0.85rem; font-weight: 700; cursor: pointer; transition: all 0.2s;">
+                            📋 1タップで予約相談文をコピー
+                        </button>
+                    </div>
 
                     <div style="display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
                         <a href="https://lin.ee/xKJlAsO" target="_blank" rel="noopener" class="btn btn--primary" style="background: linear-gradient(135deg, #06c755, #05a847); border-color: #06c755; color: #fff; font-weight: 800; padding: 14px 32px; border-radius: 9999px; font-size: 1rem;">
@@ -411,5 +416,29 @@
 
     <script src="../../js/business-config.js"></script>
     <script src="../../js/main.js"></script>
+
+    <script>
+    function copyTemplate() {
+      const text = "【Route Z 貸切・宴会相談】\n・希望日： 月 日（ ）\n・開始時間： ： 〜（2時間）\n・予定人数：約 名（8〜21名）\n・利用用途：忘年会／新年会／二次会／歓送迎会など\n・持込・食事：出前注文／ケーキ持込／その他相談";
+      navigator.clipboard.writeText(text).then(function() {
+        const btn = document.getElementById('copy-template-btn');
+        if (btn) {
+          const original = btn.innerText;
+          btn.innerText = "✓ コピー完了！LINEでそのまま貼付できます";
+          btn.style.background = "#06c755";
+          btn.style.color = "#fff";
+          btn.style.borderColor = "#06c755";
+          setTimeout(function() {
+            btn.innerText = original;
+            btn.style.background = "rgba(201, 164, 74, 0.2)";
+            btn.style.color = "var(--color-gold-light)";
+            btn.style.borderColor = "var(--color-gold)";
+          }, 3500);
+        }
+      }).catch(function(err) {
+        alert("テンプレート内容:\n" + text);
+      });
+    }
+    </script>
 </body>
 </html>
